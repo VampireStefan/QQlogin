@@ -1,0 +1,101 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#EBF2F9" >
+
+
+    <ImageView
+        android:id="@+id/image2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/imageView1"
+        android:background="@drawable/qqtouxiang" />
+
+   
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/qqlogin2" />
+
+    <EditText
+        android:id="@+id/userNumber"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_above="@+id/userPwd"
+        android:layout_toRightOf="@+id/image2"
+        android:background="#ffffff"
+        android:ems="10"
+        android:hint="QQ号/手机/邮箱"
+        android:inputType="number" >
+
+        <requestFocus />
+    </EditText>
+    
+    <EditText
+        android:id="@+id/userPwd"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_above="@+id/autoLogin"
+        android:layout_alignLeft="@+id/userNumber"
+        android:background="#ffffff"
+        android:ems="10"
+        android:hint="用户密码"
+        android:inputType="textPassword" />
+    
+ 	<Button
+        android:id="@+id/login"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/rememberPwd"
+        android:background="@drawable/selector_login"
+        android:text="安全登录"
+        android:textColor="#ffffff"
+        android:textSize="20sp" />
+
+   
+
+    <CheckBox
+        android:id="@+id/autoLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/login"
+        android:layout_toRightOf="@+id/rememberPwd"
+        android:text="自动登录" />
+    
+        <TextView 
+        android:id="@+id/register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/userNumber"
+        android:layout_toRightOf="@id/userNumber"
+        android:text="用户注册"
+        android:clickable="true"
+        android:textColor="#0096D0"
+        />
+        
+    <TextView
+        android:id="@+id/findPwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/userPwd"
+        android:layout_alignLeft="@+id/register"
+        android:text="找回密码"
+        android:textColor="#0096D0" />
+    
+    <CheckBox 
+        android:id="@+id/rememberPwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/userPwd"
+        android:layout_alignBottom="@id/image2"
+        android:text="记住密码"
+        />
+</RelativeLayout>
